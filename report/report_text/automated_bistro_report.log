@@ -1,0 +1,897 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.8)  7 APR 2026 16:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**automated_bistro_report.
+(./automated_bistro_report.tex
+! Interruption.
+<to be read again> 
+                   \begingroup 
+l.1 
+    \documentclass[10pt, a4paper]{article}
+? 
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count196
+\@cmidlb=\count197
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count198
+\@lastruleclass=\count199
+\@thisrulewidth=\dimen161
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count266
+\c@continuedfloat=\count267
+)
+\c@subfigure=\count268
+\c@subtable=\count269
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count270
+\float@exts=\toks18
+\float@box=\box50
+\@float@everytoks=\toks19
+\@floatcapt=\box51
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen170
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen171
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count271
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count272
+\leftroot@=\count273
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count274
+\DOTSCASE@=\count275
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen172
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count276
+\c@MaxMatrixCols=\count277
+\dotsspace@=\muskip16
+\c@parentequation=\count278
+\dspbrk@lvl=\count279
+\tag@help=\toks21
+\row@=\count280
+\column@=\count281
+\maxfields@=\count282
+\andhelp@=\toks22
+\eqnshift@=\dimen173
+\alignsep@=\dimen174
+\tagshift@=\dimen175
+\tagwidth@=\dimen176
+\totwidth@=\dimen177
+\lineht@=\dimen178
+\@envbody=\toks23
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+Now handling font encoding T2A ...
+... processing UTF-8 mapping file for font encoding T2A
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t2aenc.dfu
+File: t2aenc.dfu 2021/06/21 v1.2n UTF-8 support
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+0400 (decimal 1024)
+   defining Unicode char U+0401 (decimal 1025)
+   defining Unicode char U+0402 (decimal 1026)
+   defining Unicode char U+0403 (decimal 1027)
+   defining Unicode char U+0404 (decimal 1028)
+   defining Unicode char U+0405 (decimal 1029)
+   defining Unicode char U+0406 (decimal 1030)
+   defining Unicode char U+0407 (decimal 1031)
+   defining Unicode char U+0408 (decimal 1032)
+   defining Unicode char U+0409 (decimal 1033)
+   defining Unicode char U+040A (decimal 1034)
+   defining Unicode char U+040B (decimal 1035)
+   defining Unicode char U+040C (decimal 1036)
+   defining Unicode char U+040D (decimal 1037)
+   defining Unicode char U+040E (decimal 1038)
+   defining Unicode char U+040F (decimal 1039)
+   defining Unicode char U+0410 (decimal 1040)
+   defining Unicode char U+0411 (decimal 1041)
+   defining Unicode char U+0412 (decimal 1042)
+   defining Unicode char U+0413 (decimal 1043)
+   defining Unicode char U+0414 (decimal 1044)
+   defining Unicode char U+0415 (decimal 1045)
+   defining Unicode char U+0416 (decimal 1046)
+   defining Unicode char U+0417 (decimal 1047)
+   defining Unicode char U+0418 (decimal 1048)
+   defining Unicode char U+0419 (decimal 1049)
+   defining Unicode char U+041A (decimal 1050)
+   defining Unicode char U+041B (decimal 1051)
+   defining Unicode char U+041C (decimal 1052)
+   defining Unicode char U+041D (decimal 1053)
+   defining Unicode char U+041E (decimal 1054)
+   defining Unicode char U+041F (decimal 1055)
+   defining Unicode char U+0420 (decimal 1056)
+   defining Unicode char U+0421 (decimal 1057)
+   defining Unicode char U+0422 (decimal 1058)
+   defining Unicode char U+0423 (decimal 1059)
+   defining Unicode char U+0424 (decimal 1060)
+   defining Unicode char U+0425 (decimal 1061)
+   defining Unicode char U+0426 (decimal 1062)
+   defining Unicode char U+0427 (decimal 1063)
+   defining Unicode char U+0428 (decimal 1064)
+   defining Unicode char U+0429 (decimal 1065)
+   defining Unicode char U+042A (decimal 1066)
+   defining Unicode char U+042B (decimal 1067)
+   defining Unicode char U+042C (decimal 1068)
+   defining Unicode char U+042D (decimal 1069)
+   defining Unicode char U+042E (decimal 1070)
+   defining Unicode char U+042F (decimal 1071)
+   defining Unicode char U+0430 (decimal 1072)
+   defining Unicode char U+0431 (decimal 1073)
+   defining Unicode char U+0432 (decimal 1074)
+   defining Unicode char U+0433 (decimal 1075)
+   defining Unicode char U+0434 (decimal 1076)
+   defining Unicode char U+0435 (decimal 1077)
+   defining Unicode char U+0436 (decimal 1078)
+   defining Unicode char U+0437 (decimal 1079)
+   defining Unicode char U+0438 (decimal 1080)
+   defining Unicode char U+0439 (decimal 1081)
+   defining Unicode char U+043A (decimal 1082)
+   defining Unicode char U+043B (decimal 1083)
+   defining Unicode char U+043C (decimal 1084)
+   defining Unicode char U+043D (decimal 1085)
+   defining Unicode char U+043E (decimal 1086)
+   defining Unicode char U+043F (decimal 1087)
+   defining Unicode char U+0440 (decimal 1088)
+   defining Unicode char U+0441 (decimal 1089)
+   defining Unicode char U+0442 (decimal 1090)
+   defining Unicode char U+0443 (decimal 1091)
+   defining Unicode char U+0444 (decimal 1092)
+   defining Unicode char U+0445 (decimal 1093)
+   defining Unicode char U+0446 (decimal 1094)
+   defining Unicode char U+0447 (decimal 1095)
+   defining Unicode char U+0448 (decimal 1096)
+   defining Unicode char U+0449 (decimal 1097)
+   defining Unicode char U+044A (decimal 1098)
+   defining Unicode char U+044B (decimal 1099)
+   defining Unicode char U+044C (decimal 1100)
+   defining Unicode char U+044D (decimal 1101)
+   defining Unicode char U+044E (decimal 1102)
+   defining Unicode char U+044F (decimal 1103)
+   defining Unicode char U+0450 (decimal 1104)
+   defining Unicode char U+0451 (decimal 1105)
+   defining Unicode char U+0452 (decimal 1106)
+   defining Unicode char U+0453 (decimal 1107)
+   defining Unicode char U+0454 (decimal 1108)
+   defining Unicode char U+0455 (decimal 1109)
+   defining Unicode char U+0456 (decimal 1110)
+   defining Unicode char U+0457 (decimal 1111)
+   defining Unicode char U+0458 (decimal 1112)
+   defining Unicode char U+0459 (decimal 1113)
+   defining Unicode char U+045A (decimal 1114)
+   defining Unicode char U+045B (decimal 1115)
+   defining Unicode char U+045C (decimal 1116)
+   defining Unicode char U+045D (decimal 1117)
+   defining Unicode char U+045E (decimal 1118)
+   defining Unicode char U+045F (decimal 1119)
+   defining Unicode char U+0490 (decimal 1168)
+   defining Unicode char U+0491 (decimal 1169)
+   defining Unicode char U+0492 (decimal 1170)
+   defining Unicode char U+0493 (decimal 1171)
+   defining Unicode char U+0496 (decimal 1174)
+   defining Unicode char U+0497 (decimal 1175)
+   defining Unicode char U+0498 (decimal 1176)
+   defining Unicode char U+0499 (decimal 1177)
+   defining Unicode char U+049A (decimal 1178)
+   defining Unicode char U+049B (decimal 1179)
+   defining Unicode char U+049C (decimal 1180)
+   defining Unicode char U+049D (decimal 1181)
+   defining Unicode char U+04A0 (decimal 1184)
+   defining Unicode char U+04A1 (decimal 1185)
+   defining Unicode char U+04A2 (decimal 1186)
+   defining Unicode char U+04A3 (decimal 1187)
+   defining Unicode char U+04A4 (decimal 1188)
+   defining Unicode char U+04A5 (decimal 1189)
+   defining Unicode char U+04AA (decimal 1194)
+   defining Unicode char U+04AB (decimal 1195)
+   defining Unicode char U+04AE (decimal 1198)
+   defining Unicode char U+04AF (decimal 1199)
+   defining Unicode char U+04B0 (decimal 1200)
+   defining Unicode char U+04B1 (decimal 1201)
+   defining Unicode char U+04B2 (decimal 1202)
+   defining Unicode char U+04B3 (decimal 1203)
+   defining Unicode char U+04B6 (decimal 1206)
+   defining Unicode char U+04B7 (decimal 1207)
+   defining Unicode char U+04B8 (decimal 1208)
+   defining Unicode char U+04B9 (decimal 1209)
+   defining Unicode char U+04BA (decimal 1210)
+   defining Unicode char U+04BB (decimal 1211)
+   defining Unicode char U+04C0 (decimal 1216)
+   defining Unicode char U+04C1 (decimal 1217)
+   defining Unicode char U+04C2 (decimal 1218)
+   defining Unicode char U+04D0 (decimal 1232)
+   defining Unicode char U+04D1 (decimal 1233)
+   defining Unicode char U+04D2 (decimal 1234)
+   defining Unicode char U+04D3 (decimal 1235)
+   defining Unicode char U+04D4 (decimal 1236)
+   defining Unicode char U+04D5 (decimal 1237)
+   defining Unicode char U+04D6 (decimal 1238)
+   defining Unicode char U+04D7 (decimal 1239)
+   defining Unicode char U+04D8 (decimal 1240)
+   defining Unicode char U+04D9 (decimal 1241)
+   defining Unicode char U+04DA (decimal 1242)
+   defining Unicode char U+04DB (decimal 1243)
+   defining Unicode char U+04DC (decimal 1244)
+   defining Unicode char U+04DD (decimal 1245)
+   defining Unicode char U+04DE (decimal 1246)
+   defining Unicode char U+04DF (decimal 1247)
+   defining Unicode char U+04E2 (decimal 1250)
+   defining Unicode char U+04E3 (decimal 1251)
+   defining Unicode char U+04E4 (decimal 1252)
+   defining Unicode char U+04E5 (decimal 1253)
+   defining Unicode char U+04E6 (decimal 1254)
+   defining Unicode char U+04E7 (decimal 1255)
+   defining Unicode char U+04E8 (decimal 1256)
+   defining Unicode char U+04E9 (decimal 1257)
+   defining Unicode char U+04EC (decimal 1260)
+   defining Unicode char U+04ED (decimal 1261)
+   defining Unicode char U+04EE (decimal 1262)
+   defining Unicode char U+04EF (decimal 1263)
+   defining Unicode char U+04F0 (decimal 1264)
+   defining Unicode char U+04F1 (decimal 1265)
+   defining Unicode char U+04F2 (decimal 1266)
+   defining Unicode char U+04F3 (decimal 1267)
+   defining Unicode char U+04F4 (decimal 1268)
+   defining Unicode char U+04F5 (decimal 1269)
+   defining Unicode char U+04F8 (decimal 1272)
+   defining Unicode char U+04F9 (decimal 1273)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+))
+LaTeX Font Info:    Trying to load font information for T2A+ppl on input line 1
+12.
+LaTeX Font Info:    No file T2Appl.fd. on input line 112.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
+12.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+
+LaTeX Font Warning: Font shape `T2A/ppl/m/n' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 112.
+
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/02/26 3.73 The Babel package
+\babel@savecnt=\count283
+\U@D=\dimen179
+\l@unhyphenated=\language87
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count284
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 108.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-russian/russianb.ldf
+File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
+Language: russian 2020/09/09 1.3k Russian support for the Babel system
+Package babel Info: Making " an active character on input line 124.
+Package babel Info: Default for \cyrdash is provided on input line 163.
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box54
+)
+(./automated_bistro_report.aux)
+\openout1 = `automated_bistro_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count286
+\scratchdimen=\dimen180
+\scratchbox=\box55
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen181
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \th on input line 17.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
+9.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+19.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+19.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+19.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+19.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+
+LaTeX Font Warning: Font shape `T2A/ppl/b/n' undefined
+(Font)              using `T2A/ppl/m/n' instead on input line 21.
+
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+26.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+) [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../plots/Auriga/Auriga_stat_segmentation.pdf, id=17, 502.30522pt x 456.3446pt>
+
+File: ../plots/Auriga/Auriga_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_stat_segmentation.pdf  used on 
+input line 61.
+(pdftex.def)             Requested size: 245.82962pt x 223.33923pt.
+<../plots/Auriga/Auriga_snr_colored_full.pdf, id=18, 447.17844pt x 401.47452pt>
+
+File: ../plots/Auriga/Auriga_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_snr_colored_full.pdf  used on i
+nput line 65.
+(pdftex.def)             Requested size: 245.82962pt x 220.70139pt.
+<../plots/Auriga/Auriga_sf.pdf, id=19, 528.50996pt x 340.63295pt>
+File: ../plots/Auriga/Auriga_sf.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_sf.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_sf.pdf  used on input line 71.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [2 <../plots/Auriga/Auriga_stat_segmentation.pdf> <../plots/Auriga/Auriga_snr_
+colored_full.pdf> <../plots/Auriga/Auriga_sf.pdf>]
+<../plots/L1495/L1495_stat_segmentation.pdf, id=121, 510.19264pt x 444.13995pt>
+
+File: ../plots/L1495/L1495_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/L1495/L1495_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/L1495/L1495_stat_segmentation.pdf  used on in
+put line 100.
+(pdftex.def)             Requested size: 245.82962pt x 213.99799pt.
+<../plots/L1495/L1495_snr_colored_full.pdf, id=122, 460.58015pt x 397.75143pt>
+File: ../plots/L1495/L1495_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/L1495/L1495_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/L1495/L1495_snr_colored_full.pdf  used on inp
+ut line 104.
+(pdftex.def)             Requested size: 245.82962pt x 212.29419pt.
+<../plots/L1495/L1495_sf.pdf, id=123, 528.50996pt x 340.63295pt>
+File: ../plots/L1495/L1495_sf.pdf Graphic file (type pdf)
+<use ../plots/L1495/L1495_sf.pdf>
+Package pdftex.def Info: ../plots/L1495/L1495_sf.pdf  used on input line 110.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [3 <../plots/L1495/L1495_stat_segmentation.pdf> <../plots/L1495/L1495_snr_colo
+red_full.pdf> <../plots/L1495/L1495_sf.pdf>]
+<../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf, id=208, 519.52
+597pt x 433.20111pt>
+File: ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf Graphic fi
+le (type pdf)
+<use ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmenta
+tion.pdf  used on input line 139.
+(pdftex.def)             Requested size: 245.82962pt x 204.97945pt.
+<../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf, id=209, 469.913
+51pt x 388.17992pt>
+File: ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf Graphic fil
+e (type pdf)
+<use ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_f
+ull.pdf  used on input line 143.
+(pdftex.def)             Requested size: 245.82962pt x 203.06895pt.
+<../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf, id=210, 501.45761pt x 340.632
+95pt>
+File: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf Graphic file (type pdf)
+<use ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf>
+Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf  used 
+on input line 149.
+(pdftex.def)             Requested size: 307.2929pt x 208.74734pt.
+
+[4 <../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf> <../plots/L
+43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf> <../plots/L43_Karoly_2023/
+L43_Karoly_2023_sf.pdf>]
+<../plots/MonR2/MonR2_stat_segmentation.pdf, id=292, 540.41467pt x 434.54765pt>
+
+File: ../plots/MonR2/MonR2_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/MonR2/MonR2_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/MonR2/MonR2_stat_segmentation.pdf  used on in
+put line 178.
+(pdftex.def)             Requested size: 245.82962pt x 197.67307pt.
+<../plots/MonR2/MonR2_snr_colored_full.pdf, id=293, 490.8022pt x 389.35817pt>
+File: ../plots/MonR2/MonR2_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/MonR2/MonR2_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/MonR2/MonR2_snr_colored_full.pdf  used on inp
+ut line 182.
+(pdftex.def)             Requested size: 245.82962pt x 195.01724pt.
+<../plots/MonR2/MonR2_sf.pdf, id=294, 508.06883pt x 340.63295pt>
+File: ../plots/MonR2/MonR2_sf.pdf Graphic file (type pdf)
+<use ../plots/MonR2/MonR2_sf.pdf>
+Package pdftex.def Info: ../plots/MonR2/MonR2_sf.pdf  used on input line 188.
+(pdftex.def)             Requested size: 307.2929pt x 206.02377pt.
+ [5 <../plots/MonR2/MonR2_stat_segmentation.pdf> <../plots/MonR2/MonR2_snr_colo
+red_full.pdf> <../plots/MonR2/MonR2_sf.pdf>]
+<../plots/NGC1333/NGC1333_stat_segmentation.pdf, id=375, 453.53214pt x 456.3446
+pt>
+File: ../plots/NGC1333/NGC1333_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/NGC1333/NGC1333_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/NGC1333/NGC1333_stat_segmentation.pdf  used o
+n input line 217.
+(pdftex.def)             Requested size: 245.82962pt x 247.36244pt.
+<../plots/NGC1333/NGC1333_snr_colored_full.pdf, id=376, 389.04561pt x 401.47452
+pt>
+File: ../plots/NGC1333/NGC1333_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/NGC1333/NGC1333_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/NGC1333/NGC1333_snr_colored_full.pdf  used on
+ input line 221.
+(pdftex.def)             Requested size: 245.82962pt x 253.6899pt.
+<../plots/NGC1333/NGC1333_sf.pdf, id=377, 512.3189pt x 340.63295pt>
+File: ../plots/NGC1333/NGC1333_sf.pdf Graphic file (type pdf)
+<use ../plots/NGC1333/NGC1333_sf.pdf>
+Package pdftex.def Info: ../plots/NGC1333/NGC1333_sf.pdf  used on input line 22
+7.
+(pdftex.def)             Requested size: 307.2929pt x 204.31377pt.
+ [6 <../plots/NGC1333/NGC1333_stat_segmentation.pdf> <../plots/NGC1333/NGC1333_
+snr_colored_full.pdf> <../plots/NGC1333/NGC1333_sf.pdf>]
+<../plots/OMC1_450/OMC1_450_stat_segmentation.pdf, id=459, 528.66478pt x 434.71
+182pt>
+File: ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf  used
+ on input line 256.
+(pdftex.def)             Requested size: 245.82962pt x 202.1389pt.
+<../plots/OMC1_450/OMC1_450_snr_colored_full.pdf, id=460, 479.0523pt x 389.5018
+pt>
+File: ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf  used 
+on input line 260.
+(pdftex.def)             Requested size: 245.82962pt x 199.87355pt.
+<../plots/OMC1_450/OMC1_450_sf.pdf, id=461, 508.06883pt x 340.63295pt>
+File: ../plots/OMC1_450/OMC1_450_sf.pdf Graphic file (type pdf)
+<use ../plots/OMC1_450/OMC1_450_sf.pdf>
+Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_sf.pdf  used on input line 
+266.
+(pdftex.def)             Requested size: 307.2929pt x 206.02377pt.
+ [7 <../plots/OMC1_450/OMC1_450_stat_segmentation.pdf> <../plots/OMC1_450/OMC1_
+450_snr_colored_full.pdf> <../plots/OMC1_450/OMC1_450_sf.pdf>]
+<../plots/OMC1_850/OMC1_850_stat_segmentation.pdf, id=544, 534.5397pt x 441.367
+17pt>
+File: ../plots/OMC1_850/OMC1_850_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/OMC1_850/OMC1_850_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/OMC1_850/OMC1_850_stat_segmentation.pdf  used
+ on input line 295.
+(pdftex.def)             Requested size: 245.82962pt x 202.97748pt.
+<../plots/OMC1_850/OMC1_850_snr_colored_full.pdf, id=545, 484.92725pt x 395.325
+26pt>
+File: ../plots/OMC1_850/OMC1_850_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/OMC1_850/OMC1_850_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/OMC1_850/OMC1_850_snr_colored_full.pdf  used 
+on input line 299.
+(pdftex.def)             Requested size: 245.82962pt x 200.40677pt.
+<../plots/OMC1_850/OMC1_850_sf.pdf, id=546, 508.06883pt x 340.63295pt>
+File: ../plots/OMC1_850/OMC1_850_sf.pdf Graphic file (type pdf)
+<use ../plots/OMC1_850/OMC1_850_sf.pdf>
+Package pdftex.def Info: ../plots/OMC1_850/OMC1_850_sf.pdf  used on input line 
+305.
+(pdftex.def)             Requested size: 307.2929pt x 206.02377pt.
+ [8 <../plots/OMC1_850/OMC1_850_stat_segmentation.pdf> <../plots/OMC1_850/OMC1_
+850_snr_colored_full.pdf> <../plots/OMC1_850/OMC1_850_sf.pdf>]
+<../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf, id=628, 504.31769pt x 44
+6.8844pt>
+File: ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf Graphic file (type p
+df)
+<use ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf  
+used on input line 334.
+(pdftex.def)             Requested size: 245.82962pt x 217.8297pt.
+<../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf, id=629, 454.70522pt x 400
+.1528pt>
+File: ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf Graphic file (type pd
+f)
+<use ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf  u
+sed on input line 338.
+(pdftex.def)             Requested size: 245.82962pt x 216.33572pt.
+<../plots/Perseus_B1/Perseus_B1_sf.pdf, id=630, 508.06883pt x 340.63295pt>
+File: ../plots/Perseus_B1/Perseus_B1_sf.pdf Graphic file (type pdf)
+<use ../plots/Perseus_B1/Perseus_B1_sf.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_sf.pdf  used on input l
+ine 344.
+(pdftex.def)             Requested size: 307.2929pt x 206.02377pt.
+ [9 <../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf> <../plots/Perseus_B1
+/Perseus_B1_snr_colored_full.pdf> <../plots/Perseus_B1/Perseus_B1_sf.pdf>]
+<../plots/Rosette/Rosette_stat_segmentation.pdf, id=711, 478.26537pt x 456.3446
+pt>
+File: ../plots/Rosette/Rosette_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/Rosette/Rosette_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/Rosette/Rosette_stat_segmentation.pdf  used o
+n input line 373.
+(pdftex.def)             Requested size: 245.82962pt x 234.564pt.
+<../plots/Rosette/Rosette_snr_colored_full.pdf, id=712, 425.73357pt x 401.47452
+pt>
+File: ../plots/Rosette/Rosette_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/Rosette/Rosette_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/Rosette/Rosette_snr_colored_full.pdf  used on
+ input line 377.
+(pdftex.def)             Requested size: 245.82962pt x 231.8262pt.
+<../plots/Rosette/Rosette_sf.pdf, id=713, 537.64879pt x 340.63295pt>
+File: ../plots/Rosette/Rosette_sf.pdf Graphic file (type pdf)
+<use ../plots/Rosette/Rosette_sf.pdf>
+Package pdftex.def Info: ../plots/Rosette/Rosette_sf.pdf  used on input line 38
+3.
+(pdftex.def)             Requested size: 307.2929pt x 194.69295pt.
+ [10 <../plots/Rosette/Rosette_stat_segmentation.pdf> <../plots/Rosette/Rosette
+_snr_colored_full.pdf> <../plots/Rosette/Rosette_sf.pdf>]
+<../plots/oph_a/oph_a_stat_segmentation.pdf, id=798, 525.40094pt x 433.18062pt>
+
+File: ../plots/oph_a/oph_a_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/oph_a/oph_a_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/oph_a/oph_a_stat_segmentation.pdf  used on in
+put line 412.
+(pdftex.def)             Requested size: 245.82962pt x 202.68275pt.
+<../plots/oph_a/oph_a_snr_colored_full.pdf, id=799, 475.78847pt x 388.16199pt>
+File: ../plots/oph_a/oph_a_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/oph_a/oph_a_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/oph_a/oph_a_snr_colored_full.pdf  used on inp
+ut line 416.
+(pdftex.def)             Requested size: 245.82962pt x 200.55421pt.
+<../plots/oph_a/oph_a_sf.pdf, id=800, 508.06883pt x 340.63295pt>
+File: ../plots/oph_a/oph_a_sf.pdf Graphic file (type pdf)
+<use ../plots/oph_a/oph_a_sf.pdf>
+Package pdftex.def Info: ../plots/oph_a/oph_a_sf.pdf  used on input line 422.
+(pdftex.def)             Requested size: 307.2929pt x 206.02377pt.
+ [11 <../plots/oph_a/oph_a_stat_segmentation.pdf> <../plots/oph_a/oph_a_snr_col
+ored_full.pdf> <../plots/oph_a/oph_a_sf.pdf>]
+<../plots/oph_b/oph_b_stat_segmentation.pdf, id=882, 519.52597pt x 431.79807pt>
+
+File: ../plots/oph_b/oph_b_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_stat_segmentation.pdf  used on in
+put line 451.
+(pdftex.def)             Requested size: 245.82962pt x 204.31555pt.
+<../plots/oph_b/oph_b_snr_colored_full.pdf, id=883, 469.91351pt x 386.95227pt>
+File: ../plots/oph_b/oph_b_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_snr_colored_full.pdf  used on inp
+ut line 455.
+(pdftex.def)             Requested size: 245.82962pt x 202.42673pt.
+<../plots/oph_b/oph_b_sf.pdf, id=884, 528.50996pt x 340.63295pt>
+File: ../plots/oph_b/oph_b_sf.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_sf.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_sf.pdf  used on input line 461.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [12 <../plots/oph_b/oph_b_stat_segmentation.pdf> <../plots/oph_b/oph_b_snr_col
+ored_full.pdf> <../plots/oph_b/oph_b_sf.pdf>]
+<../plots/oph_c/oph_c_stat_segmentation.pdf, id=968, 519.52597pt x 433.15997pt>
+
+File: ../plots/oph_c/oph_c_stat_segmentation.pdf Graphic file (type pdf)
+<use ../plots/oph_c/oph_c_stat_segmentation.pdf>
+Package pdftex.def Info: ../plots/oph_c/oph_c_stat_segmentation.pdf  used on in
+put line 490.
+(pdftex.def)             Requested size: 245.82962pt x 204.95998pt.
+<../plots/oph_c/oph_c_snr_colored_full.pdf, id=969, 469.91351pt x 388.14395pt>
+File: ../plots/oph_c/oph_c_snr_colored_full.pdf Graphic file (type pdf)
+<use ../plots/oph_c/oph_c_snr_colored_full.pdf>
+Package pdftex.def Info: ../plots/oph_c/oph_c_snr_colored_full.pdf  used on inp
+ut line 494.
+(pdftex.def)             Requested size: 245.82962pt x 203.05014pt.
+<../plots/oph_c/oph_c_sf.pdf, id=970, 537.64879pt x 340.63295pt>
+File: ../plots/oph_c/oph_c_sf.pdf Graphic file (type pdf)
+<use ../plots/oph_c/oph_c_sf.pdf>
+Package pdftex.def Info: ../plots/oph_c/oph_c_sf.pdf  used on input line 500.
+(pdftex.def)             Requested size: 307.2929pt x 194.69295pt.
+
+[13 <../plots/oph_c/oph_c_stat_segmentation.pdf> <../plots/oph_c/oph_c_snr_colo
+red_full.pdf> <../plots/oph_c/oph_c_sf.pdf>] (./automated_bistro_report.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 7048 strings out of 478268
+ 126750 string characters out of 5846347
+ 413112 words of memory out of 5000000
+ 25101 multiletter control sequences out of 15000+600000
+ 490684 words of font info for 77 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,9n,77p,715b,410s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
+}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/u
+rw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/pala
+tino/uplri8a.pfb>
+Output written on automated_bistro_report.pdf (13 pages, 2662721 bytes).
+PDF statistics:
+ 1113 PDF objects out of 1200 (max. 8388607)
+ 926 compressed objects within 10 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+
