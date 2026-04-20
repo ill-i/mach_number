@@ -7,3 +7,4 @@ report/plots/
 .DS_Store
 report/fireplace_results
 report/fieldmaps_results
+__pycache__/
