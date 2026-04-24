@@ -7,6 +7,7 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import re
 
 
 # =========================
@@ -50,6 +51,13 @@ class SFAnalysisResult:
 
     tail_start_pix: Optional[float]
     notes: str = ""
+
+
+def safe_filename(s: str) -> str:
+    s = str(s)
+    s = re.sub(r'[<>:"/\\|?*]', "_", s)   # запрещённые для Windows символы
+    s = s.replace(" ", "_")
+    return s
 
 
 # =========================
@@ -153,17 +161,6 @@ def estimate_r_break_piecewise_loglog(
     """
     Estimate break scale r_break by fitting two straight lines in log-log space:
         log10(Dphi) vs log10(R)
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        Prepared SF table.
-    config : SFAnalysisConfig
-        Analysis config.
-    use_smooth : bool
-        If True, use Dphi_smooth. Otherwise use raw Dphi.
-    min_segment_points : int
-        Minimum number of points required on each side of the break.
 
     Returns
     -------
@@ -273,6 +270,7 @@ def estimate_r_break_piecewise_loglog(
         "status": "ok",
     }
 
+
 # =========================
 # Plotting
 # =========================
@@ -316,6 +314,47 @@ def plot_sf_diagnostic(
 
     break_info = extras.get("break_info", {})
     r_break_pix = break_info.get("r_break_pix", None)
+
+    # draw piecewise fitted lines
+    if break_info.get("status") == "ok":
+        y_col = "Dphi_smooth" if "Dphi_smooth" in valid.columns else config.dphi_col
+
+        work = valid[[config.r_col, y_col]].copy()
+        work = work.dropna(subset=[config.r_col, y_col]).copy()
+        work = work[(work[config.r_col] > 0) & (work[y_col] > 0)].copy()
+        work = work.sort_values(config.r_col).reset_index(drop=True)
+
+        if len(work) > 0:
+            break_idx = break_info["break_idx"]
+
+            left = work.iloc[:break_idx].copy()
+            right = work.iloc[break_idx:].copy()
+
+            if len(left) >= 2:
+                x_left = left[config.r_col].to_numpy()
+                y_left_fit = 10 ** (
+                    break_info["slope_left"] * np.log10(x_left) + break_info["intercept_left"]
+                )
+                ax.loglog(
+                    x_left,
+                    y_left_fit,
+                    lw=2.2,
+                    ls="--",
+                    label=f"piecewise left fit (s={break_info['slope_left']:.2f})",
+                )
+
+            if len(right) >= 2:
+                x_right = right[config.r_col].to_numpy()
+                y_right_fit = 10 ** (
+                    break_info["slope_right"] * np.log10(x_right) + break_info["intercept_right"]
+                )
+                ax.loglog(
+                    x_right,
+                    y_right_fit,
+                    lw=2.2,
+                    ls="--",
+                    label=f"piecewise right fit (s={break_info['slope_right']:.2f})",
+                )
 
     if r_break_pix is not None and r_break_pix > 0:
         ax.axvline(
@@ -439,8 +478,11 @@ def analyze_sf_table(df: pd.DataFrame, config: SFAnalysisConfig, output_dir: Pat
         "break_info": break_info,
     }
 
-    plots_dir = output_dir / "plots" / object_name
+    plots_dir = output_dir / "plots" / (object_name or "unknown_object")
     plots_dir.mkdir(parents=True, exist_ok=True)
+
+    safe_object = safe_filename(object_name or "unknown_object")
+    safe_mask = safe_filename(mask_name or "unknown_mask")
 
     plot_sf_diagnostic(
         valid,
@@ -449,7 +491,10 @@ def analyze_sf_table(df: pd.DataFrame, config: SFAnalysisConfig, output_dir: Pat
         config,
         title=f"SF diagnostic: {object_name} | {mask_name}",
     )
-    plt.savefig(plots_dir / f"{object_name}_{mask_name}_sf_diagnostic.pdf", bbox_inches="tight")
+    plt.savefig(
+        output_dir /  "plots" / (object_name or "unknown_object") / f"{safe_object}_{safe_mask}_sf_diagnostic.pdf",
+        bbox_inches="tight"
+    )
     plt.close()
 
     plot_npairs(
@@ -457,17 +502,18 @@ def analyze_sf_table(df: pd.DataFrame, config: SFAnalysisConfig, output_dir: Pat
         config,
         title=f"Npairs: {object_name} | {mask_name}",
     )
-    plt.savefig(plots_dir / f"{object_name}_{mask_name}_npairs.pdf", bbox_inches="tight")
+    plt.savefig(
+        output_dir /  "plots" / (object_name or "unknown_object") / f"{safe_object}_{safe_mask}_npairs.pdf",
+        bbox_inches="tight"
+    )
     plt.close()
 
     return result, valid, extras
-    
 
 
-
-
-
-
+# =========================
+# Mach estimate
+# =========================
 
 @dataclass
 class MachEstimateResult:
