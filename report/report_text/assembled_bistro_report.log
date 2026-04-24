@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.8)  14 APR 2026 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.8)  19 APR 2026 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,276 +581,231 @@ LaTeX Font Warning: Font shape `T2A/ppl/m/it' undefined
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../plots/Auriga/Auriga_stat_segmentation.pdf, id=18, 502.30522pt x 456.3446pt>
+[2]
+<../plots/Auriga/Auriga_stat_segmentation.pdf, id=22, 502.30522pt x 456.3446pt>
 
 File: ../plots/Auriga/Auriga_stat_segmentation.pdf Graphic file (type pdf)
 <use ../plots/Auriga/Auriga_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/Auriga/Auriga_stat_segmentation.pdf  used on 
-input line 48.
+input line 78.
 (pdftex.def)             Requested size: 245.82962pt x 223.33923pt.
-<../plots/Auriga/Auriga_snr_colored_full.pdf, id=19, 447.17844pt x 401.47452pt>
+<../plots/Auriga/Auriga_snr_colored_full.pdf, id=23, 447.17844pt x 401.47452pt>
 
 File: ../plots/Auriga/Auriga_snr_colored_full.pdf Graphic file (type pdf)
 <use ../plots/Auriga/Auriga_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/Auriga/Auriga_snr_colored_full.pdf  used on i
-nput line 50.
+nput line 80.
 (pdftex.def)             Requested size: 245.82962pt x 220.70139pt.
-<../plots/Auriga/Auriga_sf.pdf, id=20, 528.50996pt x 340.63295pt>
-File: ../plots/Auriga/Auriga_sf.pdf Graphic file (type pdf)
-<use ../plots/Auriga/Auriga_sf.pdf>
-Package pdftex.def Info: ../plots/Auriga/Auriga_sf.pdf  used on input line 53.
-(pdftex.def)             Requested size: 358.50317pt x 231.06078pt.
-
-[2 <../plots/Auriga/Auriga_stat_segmentation.pdf> <../plots/Auriga/Auriga_snr_c
-olored_full.pdf> <../plots/Auriga/Auriga_sf.pdf>]
-<../plots/L1495/L1495_stat_segmentation.pdf, id=123, 510.19264pt x 444.13995pt>
-
-File: ../plots/L1495/L1495_stat_segmentation.pdf Graphic file (type pdf)
-<use ../plots/L1495/L1495_stat_segmentation.pdf>
-Package pdftex.def Info: ../plots/L1495/L1495_stat_segmentation.pdf  used on in
-put line 76.
-(pdftex.def)             Requested size: 245.82962pt x 213.99799pt.
-<../plots/L1495/L1495_snr_colored_full.pdf, id=124, 460.58015pt x 397.75143pt>
-File: ../plots/L1495/L1495_snr_colored_full.pdf Graphic file (type pdf)
-<use ../plots/L1495/L1495_snr_colored_full.pdf>
-Package pdftex.def Info: ../plots/L1495/L1495_snr_colored_full.pdf  used on inp
-ut line 78.
-(pdftex.def)             Requested size: 245.82962pt x 212.29419pt.
-<../plots/L1495/L1495_sf.pdf, id=125, 508.06883pt x 340.63295pt>
-File: ../plots/L1495/L1495_sf.pdf Graphic file (type pdf)
-<use ../plots/L1495/L1495_sf.pdf>
-Package pdftex.def Info: ../plots/L1495/L1495_sf.pdf  used on input line 81.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [3 <../plots/L1495/L1495_stat_segmentation.pdf> <../plots/L1495/L1495_snr_colo
-red_full.pdf> <../plots/L1495/L1495_sf.pdf>]
-<../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf, id=207, 519.52
+<../plots/Auriga/Auriga_sf_Core_1_Primary.pdf, id=24, 528.50996pt x 340.63295pt
+>
+File: ../plots/Auriga/Auriga_sf_Core_1_Primary.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_sf_Core_1_Primary.pdf  used on 
+input line 85.
+(pdftex.def)             Requested size: 245.82962pt x 158.43945pt.
+<../plots/Auriga/Auriga_sf_Core_2_Secondary.pdf, id=25, 528.50996pt x 340.63295
+pt>
+File: ../plots/Auriga/Auriga_sf_Core_2_Secondary.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_sf_Core_2_Secondary.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_sf_Core_2_Secondary.pdf  used o
+n input line 90.
+(pdftex.def)             Requested size: 245.82962pt x 158.43945pt.
+<../plots/Auriga/Auriga_sf_Combined_1_and_2.pdf, id=26, 528.50996pt x 340.63295
+pt>
+File: ../plots/Auriga/Auriga_sf_Combined_1_and_2.pdf Graphic file (type pdf)
+<use ../plots/Auriga/Auriga_sf_Combined_1_and_2.pdf>
+Package pdftex.def Info: ../plots/Auriga/Auriga_sf_Combined_1_and_2.pdf  used o
+n input line 97.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [3] [4 <../plots/Auriga/Auriga_stat_segmentation.pdf> <../plots/Auriga/Auriga_
+snr_colored_full.pdf> <../plots/Auriga/Auriga_sf_Core_1_Primary.pdf> <../plots/
+Auriga/Auriga_sf_Core_2_Secondary.pdf> <../plots/Auriga/Auriga_sf_Combined_1_an
+d_2.pdf>]
+<../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf, id=192, 519.52
 597pt x 433.20111pt>
 File: ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf Graphic fi
 le (type pdf)
 <use ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmenta
-tion.pdf  used on input line 104.
+tion.pdf  used on input line 125.
 (pdftex.def)             Requested size: 245.82962pt x 204.97945pt.
-<../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf, id=208, 469.913
+<../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf, id=193, 469.913
 51pt x 388.17992pt>
 File: ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf Graphic fil
 e (type pdf)
 <use ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_f
-ull.pdf  used on input line 106.
+ull.pdf  used on input line 127.
 (pdftex.def)             Requested size: 245.82962pt x 203.06895pt.
-<../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf, id=209, 508.06883pt x 340.632
-95pt>
-File: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf Graphic file (type pdf)
-<use ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf>
-Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf  used 
-on input line 109.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [4 <../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf> <../plots/
+<../plots/L43_Karoly_2023/L43_Karoly_2023_sf_Core_1_Primary.pdf, id=194, 528.50
+996pt x 340.63295pt>
+File: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf_Core_1_Primary.pdf Graphic fi
+le (type pdf)
+<use ../plots/L43_Karoly_2023/L43_Karoly_2023_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/L43_Karoly_2023/L43_Karoly_2023_sf_Core_1_Pri
+mary.pdf  used on input line 132.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [5 <../plots/L43_Karoly_2023/L43_Karoly_2023_stat_segmentation.pdf> <../plots/
 L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf> <../plots/L43_Karoly_2023
-/L43_Karoly_2023_sf.pdf>]
-<../plots/MonR2/MonR2_stat_segmentation.pdf, id=291, 540.41467pt x 434.54765pt>
+/L43_Karoly_2023_sf_Core_1_Primary.pdf>]
+<../plots/MonR2/MonR2_stat_segmentation.pdf, id=279, 540.41467pt x 434.54765pt>
 
 File: ../plots/MonR2/MonR2_stat_segmentation.pdf Graphic file (type pdf)
 <use ../plots/MonR2/MonR2_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/MonR2/MonR2_stat_segmentation.pdf  used on in
-put line 132.
+put line 160.
 (pdftex.def)             Requested size: 245.82962pt x 197.67307pt.
-<../plots/MonR2/MonR2_snr_colored_full.pdf, id=292, 490.8022pt x 389.35817pt>
+<../plots/MonR2/MonR2_snr_colored_full.pdf, id=280, 490.8022pt x 389.35817pt>
 File: ../plots/MonR2/MonR2_snr_colored_full.pdf Graphic file (type pdf)
 <use ../plots/MonR2/MonR2_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/MonR2/MonR2_snr_colored_full.pdf  used on inp
-ut line 134.
+ut line 162.
 (pdftex.def)             Requested size: 245.82962pt x 195.01724pt.
-<../plots/MonR2/MonR2_sf.pdf, id=293, 528.50996pt x 340.63295pt>
-File: ../plots/MonR2/MonR2_sf.pdf Graphic file (type pdf)
-<use ../plots/MonR2/MonR2_sf.pdf>
-Package pdftex.def Info: ../plots/MonR2/MonR2_sf.pdf  used on input line 137.
-(pdftex.def)             Requested size: 358.50317pt x 231.06078pt.
- [5 <../plots/MonR2/MonR2_stat_segmentation.pdf> <../plots/MonR2/MonR2_snr_colo
-red_full.pdf> <../plots/MonR2/MonR2_sf.pdf>]
-<../plots/NGC1333/NGC1333_stat_segmentation.pdf, id=377, 453.53214pt x 456.3446
-pt>
-File: ../plots/NGC1333/NGC1333_stat_segmentation.pdf Graphic file (type pdf)
-<use ../plots/NGC1333/NGC1333_stat_segmentation.pdf>
-Package pdftex.def Info: ../plots/NGC1333/NGC1333_stat_segmentation.pdf  used o
-n input line 156.
-(pdftex.def)             Requested size: 245.82962pt x 247.36244pt.
-<../plots/NGC1333/NGC1333_snr_colored_full.pdf, id=378, 389.04561pt x 401.47452
-pt>
-File: ../plots/NGC1333/NGC1333_snr_colored_full.pdf Graphic file (type pdf)
-<use ../plots/NGC1333/NGC1333_snr_colored_full.pdf>
-Package pdftex.def Info: ../plots/NGC1333/NGC1333_snr_colored_full.pdf  used on
- input line 158.
-(pdftex.def)             Requested size: 245.82962pt x 253.6899pt.
-<../plots/NGC1333/NGC1333_sf.pdf, id=379, 512.3189pt x 340.63295pt>
-File: ../plots/NGC1333/NGC1333_sf.pdf Graphic file (type pdf)
-<use ../plots/NGC1333/NGC1333_sf.pdf>
-Package pdftex.def Info: ../plots/NGC1333/NGC1333_sf.pdf  used on input line 16
-1.
-(pdftex.def)             Requested size: 358.50317pt x 238.36345pt.
- [6 <../plots/NGC1333/NGC1333_stat_segmentation.pdf> <../plots/NGC1333/NGC1333_
-snr_colored_full.pdf> <../plots/NGC1333/NGC1333_sf.pdf>]
-<../plots/OMC1_450/OMC1_450_stat_segmentation.pdf, id=458, 528.66478pt x 434.71
-182pt>
-File: ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf Graphic file (type pdf)
-<use ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf>
-Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_stat_segmentation.pdf  used
- on input line 180.
-(pdftex.def)             Requested size: 245.82962pt x 202.1389pt.
-<../plots/OMC1_450/OMC1_450_snr_colored_full.pdf, id=459, 479.0523pt x 389.5018
-pt>
-File: ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf Graphic file (type pdf)
-<use ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf>
-Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_snr_colored_full.pdf  used 
-on input line 182.
-(pdftex.def)             Requested size: 245.82962pt x 199.87355pt.
-<../plots/OMC1_450/OMC1_450_sf.pdf, id=460, 508.06883pt x 340.63295pt>
-File: ../plots/OMC1_450/OMC1_450_sf.pdf Graphic file (type pdf)
-<use ../plots/OMC1_450/OMC1_450_sf.pdf>
-Package pdftex.def Info: ../plots/OMC1_450/OMC1_450_sf.pdf  used on input line 
-185.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [7 <../plots/OMC1_450/OMC1_450_stat_segmentation.pdf> <../plots/OMC1_450/OMC1_
-450_snr_colored_full.pdf> <../plots/OMC1_450/OMC1_450_sf.pdf>]
-<../plots/OMC1/OMC1_stat_segmentation.pdf, id=543, 534.5397pt x 441.36717pt>
+<../plots/MonR2/MonR2_sf_Core_1_Primary.pdf, id=281, 528.50996pt x 340.63295pt>
+
+File: ../plots/MonR2/MonR2_sf_Core_1_Primary.pdf Graphic file (type pdf)
+<use ../plots/MonR2/MonR2_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/MonR2/MonR2_sf_Core_1_Primary.pdf  used on in
+put line 167.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [6 <../plots/MonR2/MonR2_stat_segmentation.pdf> <../plots/MonR2/MonR2_snr_colo
+red_full.pdf> <../plots/MonR2/MonR2_sf_Core_1_Primary.pdf>]
+<../plots/OMC1/OMC1_stat_segmentation.pdf, id=365, 534.5397pt x 441.36717pt>
 File: ../plots/OMC1/OMC1_stat_segmentation.pdf Graphic file (type pdf)
 <use ../plots/OMC1/OMC1_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/OMC1/OMC1_stat_segmentation.pdf  used on inpu
-t line 208.
+t line 195.
 (pdftex.def)             Requested size: 245.82962pt x 202.97748pt.
-<../plots/OMC1/OMC1_snr_colored_full.pdf, id=544, 484.92725pt x 395.32526pt>
+<../plots/OMC1/OMC1_snr_colored_full.pdf, id=366, 484.92725pt x 395.32526pt>
 File: ../plots/OMC1/OMC1_snr_colored_full.pdf Graphic file (type pdf)
 <use ../plots/OMC1/OMC1_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/OMC1/OMC1_snr_colored_full.pdf  used on input
- line 210.
+ line 197.
 (pdftex.def)             Requested size: 245.82962pt x 200.40677pt.
-<../plots/OMC1/OMC1_sf.pdf, id=545, 508.06883pt x 340.63295pt>
-File: ../plots/OMC1/OMC1_sf.pdf Graphic file (type pdf)
-<use ../plots/OMC1/OMC1_sf.pdf>
-Package pdftex.def Info: ../plots/OMC1/OMC1_sf.pdf  used on input line 213.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [8 <../plots/OMC1/OMC1_stat_segmentation.pdf> <../plots/OMC1/OMC1_snr_colored_
-full.pdf> <../plots/OMC1/OMC1_sf.pdf>]
-<../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf, id=627, 504.31769pt x 44
+<../plots/OMC1/OMC1_sf_Core_1_Primary.pdf, id=367, 512.91705pt x 340.63295pt>
+File: ../plots/OMC1/OMC1_sf_Core_1_Primary.pdf Graphic file (type pdf)
+<use ../plots/OMC1/OMC1_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/OMC1/OMC1_sf_Core_1_Primary.pdf  used on inpu
+t line 202.
+(pdftex.def)             Requested size: 307.2929pt x 204.07466pt.
+ [7 <../plots/OMC1/OMC1_stat_segmentation.pdf> <../plots/OMC1/OMC1_snr_colored_
+full.pdf> <../plots/OMC1/OMC1_sf_Core_1_Primary.pdf>]
+<../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf, id=450, 504.31769pt x 44
 6.8844pt>
 File: ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf Graphic file (type p
 df)
 <use ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf  
-used on input line 236.
+used on input line 230.
 (pdftex.def)             Requested size: 245.82962pt x 217.8297pt.
-<../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf, id=628, 454.70522pt x 400
+<../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf, id=451, 454.70522pt x 400
 .1528pt>
 File: ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf Graphic file (type pd
 f)
 <use ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf  u
-sed on input line 238.
+sed on input line 232.
 (pdftex.def)             Requested size: 245.82962pt x 216.33572pt.
-<../plots/Perseus_B1/Perseus_B1_sf.pdf, id=629, 508.06883pt x 340.63295pt>
-File: ../plots/Perseus_B1/Perseus_B1_sf.pdf Graphic file (type pdf)
-<use ../plots/Perseus_B1/Perseus_B1_sf.pdf>
-Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_sf.pdf  used on input l
-ine 241.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [9 <../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf> <../plots/Perseus_B1
-/Perseus_B1_snr_colored_full.pdf> <../plots/Perseus_B1/Perseus_B1_sf.pdf>]
-<../plots/Rosette/Rosette_stat_segmentation.pdf, id=710, 478.26537pt x 456.3446
-pt>
-File: ../plots/Rosette/Rosette_stat_segmentation.pdf Graphic file (type pdf)
-<use ../plots/Rosette/Rosette_stat_segmentation.pdf>
-Package pdftex.def Info: ../plots/Rosette/Rosette_stat_segmentation.pdf  used o
-n input line 264.
-(pdftex.def)             Requested size: 245.82962pt x 234.564pt.
-<../plots/Rosette/Rosette_snr_colored_full.pdf, id=711, 425.73357pt x 401.47452
-pt>
-File: ../plots/Rosette/Rosette_snr_colored_full.pdf Graphic file (type pdf)
-<use ../plots/Rosette/Rosette_snr_colored_full.pdf>
-Package pdftex.def Info: ../plots/Rosette/Rosette_snr_colored_full.pdf  used on
- input line 266.
-(pdftex.def)             Requested size: 245.82962pt x 231.8262pt.
-<../plots/Rosette/Rosette_sf.pdf, id=712, 528.50996pt x 340.63295pt>
-File: ../plots/Rosette/Rosette_sf.pdf Graphic file (type pdf)
-<use ../plots/Rosette/Rosette_sf.pdf>
-Package pdftex.def Info: ../plots/Rosette/Rosette_sf.pdf  used on input line 26
-9.
-(pdftex.def)             Requested size: 358.50317pt x 231.06078pt.
-
-[10 <../plots/Rosette/Rosette_stat_segmentation.pdf> <../plots/Rosette/Rosette_
-snr_colored_full.pdf> <../plots/Rosette/Rosette_sf.pdf>]
-<../plots/oph_a/oph_a_stat_segmentation.pdf, id=797, 525.40094pt x 433.18062pt>
+<../plots/Perseus_B1/Perseus_B1_sf_Core_1_Primary.pdf, id=452, 528.50996pt x 34
+0.63295pt>
+File: ../plots/Perseus_B1/Perseus_B1_sf_Core_1_Primary.pdf Graphic file (type p
+df)
+<use ../plots/Perseus_B1/Perseus_B1_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_sf_Core_1_Primary.pdf  
+used on input line 237.
+(pdftex.def)             Requested size: 245.82962pt x 158.43945pt.
+<../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf, id=453, 528.50996pt x 
+340.63295pt>
+File: ../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf Graphic file (type
+ pdf)
+<use ../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf
+  used on input line 242.
+(pdftex.def)             Requested size: 245.82962pt x 158.43945pt.
+<../plots/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf, id=454, 528.50996pt x 
+340.63295pt>
+File: ../plots/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf Graphic file (type
+ pdf)
+<use ../plots/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf>
+Package pdftex.def Info: ../plots/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf
+  used on input line 249.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [8] [9 <../plots/Perseus_B1/Perseus_B1_stat_segmentation.pdf> <../plots/Perseu
+s_B1/Perseus_B1_snr_colored_full.pdf> <../plots/Perseus_B1/Perseus_B1_sf_Core_1
+_Primary.pdf> <../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf> <../plot
+s/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf>]
+<../plots/oph_a/oph_a_stat_segmentation.pdf, id=599, 525.40094pt x 433.18062pt>
 
 File: ../plots/oph_a/oph_a_stat_segmentation.pdf Graphic file (type pdf)
 <use ../plots/oph_a/oph_a_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/oph_a/oph_a_stat_segmentation.pdf  used on in
-put line 292.
+put line 277.
 (pdftex.def)             Requested size: 245.82962pt x 202.68275pt.
-<../plots/oph_a/oph_a_snr_colored_full.pdf, id=798, 475.78847pt x 388.16199pt>
+<../plots/oph_a/oph_a_snr_colored_full.pdf, id=600, 475.78847pt x 388.16199pt>
 File: ../plots/oph_a/oph_a_snr_colored_full.pdf Graphic file (type pdf)
 <use ../plots/oph_a/oph_a_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/oph_a/oph_a_snr_colored_full.pdf  used on inp
-ut line 294.
+ut line 279.
 (pdftex.def)             Requested size: 245.82962pt x 200.55421pt.
-<../plots/oph_a/oph_a_sf.pdf, id=799, 528.50996pt x 340.63295pt>
-File: ../plots/oph_a/oph_a_sf.pdf Graphic file (type pdf)
-<use ../plots/oph_a/oph_a_sf.pdf>
-Package pdftex.def Info: ../plots/oph_a/oph_a_sf.pdf  used on input line 297.
-(pdftex.def)             Requested size: 358.50317pt x 231.06078pt.
- [11 <../plots/oph_a/oph_a_stat_segmentation.pdf> <../plots/oph_a/oph_a_snr_col
-ored_full.pdf> <../plots/oph_a/oph_a_sf.pdf>]
-<../plots/oph_b/oph_b_stat_segmentation.pdf, id=884, 519.52597pt x 431.79807pt>
+<../plots/oph_a/oph_a_sf_Core_1_Primary.pdf, id=601, 528.50996pt x 340.63295pt>
+
+File: ../plots/oph_a/oph_a_sf_Core_1_Primary.pdf Graphic file (type pdf)
+<use ../plots/oph_a/oph_a_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/oph_a/oph_a_sf_Core_1_Primary.pdf  used on in
+put line 284.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [10 <../plots/oph_a/oph_a_stat_segmentation.pdf> <../plots/oph_a/oph_a_snr_col
+ored_full.pdf> <../plots/oph_a/oph_a_sf_Core_1_Primary.pdf>]
+<../plots/oph_b/oph_b_stat_segmentation.pdf, id=686, 519.52597pt x 431.79807pt>
 
 File: ../plots/oph_b/oph_b_stat_segmentation.pdf Graphic file (type pdf)
 <use ../plots/oph_b/oph_b_stat_segmentation.pdf>
 Package pdftex.def Info: ../plots/oph_b/oph_b_stat_segmentation.pdf  used on in
-put line 320.
+put line 312.
 (pdftex.def)             Requested size: 245.82962pt x 204.31555pt.
-<../plots/oph_b/oph_b_snr_colored_full.pdf, id=885, 469.91351pt x 386.95227pt>
+<../plots/oph_b/oph_b_snr_colored_full.pdf, id=687, 469.91351pt x 386.95227pt>
 File: ../plots/oph_b/oph_b_snr_colored_full.pdf Graphic file (type pdf)
 <use ../plots/oph_b/oph_b_snr_colored_full.pdf>
 Package pdftex.def Info: ../plots/oph_b/oph_b_snr_colored_full.pdf  used on inp
-ut line 322.
+ut line 314.
 (pdftex.def)             Requested size: 245.82962pt x 202.42673pt.
-<../plots/oph_b/oph_b_sf.pdf, id=886, 528.50996pt x 340.63295pt>
-File: ../plots/oph_b/oph_b_sf.pdf Graphic file (type pdf)
-<use ../plots/oph_b/oph_b_sf.pdf>
-Package pdftex.def Info: ../plots/oph_b/oph_b_sf.pdf  used on input line 325.
-(pdftex.def)             Requested size: 358.50317pt x 231.06078pt.
- [12 <../plots/oph_b/oph_b_stat_segmentation.pdf> <../plots/oph_b/oph_b_snr_col
-ored_full.pdf> <../plots/oph_b/oph_b_sf.pdf>]
-<../plots/oph_c/oph_c_stat_segmentation.pdf, id=970, 519.52597pt x 433.15997pt>
+<../plots/oph_b/oph_b_sf_Core_1_Primary.pdf, id=688, 528.50996pt x 340.63295pt>
 
-File: ../plots/oph_c/oph_c_stat_segmentation.pdf Graphic file (type pdf)
-<use ../plots/oph_c/oph_c_stat_segmentation.pdf>
-Package pdftex.def Info: ../plots/oph_c/oph_c_stat_segmentation.pdf  used on in
-put line 348.
-(pdftex.def)             Requested size: 245.82962pt x 204.95998pt.
-<../plots/oph_c/oph_c_snr_colored_full.pdf, id=971, 469.91351pt x 388.14395pt>
-File: ../plots/oph_c/oph_c_snr_colored_full.pdf Graphic file (type pdf)
-<use ../plots/oph_c/oph_c_snr_colored_full.pdf>
-Package pdftex.def Info: ../plots/oph_c/oph_c_snr_colored_full.pdf  used on inp
-ut line 350.
-(pdftex.def)             Requested size: 245.82962pt x 203.05014pt.
-<../plots/oph_c/oph_c_sf.pdf, id=972, 508.06883pt x 340.63295pt>
-File: ../plots/oph_c/oph_c_sf.pdf Graphic file (type pdf)
-<use ../plots/oph_c/oph_c_sf.pdf>
-Package pdftex.def Info: ../plots/oph_c/oph_c_sf.pdf  used on input line 353.
-(pdftex.def)             Requested size: 358.50317pt x 240.35934pt.
- [13 <../plots/oph_c/oph_c_stat_segmentation.pdf> <../plots/oph_c/oph_c_snr_col
-ored_full.pdf> <../plots/oph_c/oph_c_sf.pdf>] (./assembled_bistro_report.aux)
+File: ../plots/oph_b/oph_b_sf_Core_1_Primary.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_sf_Core_1_Primary.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_sf_Core_1_Primary.pdf  used on in
+put line 319.
+(pdftex.def)             Requested size: 245.82962pt x 158.43945pt.
+<../plots/oph_b/oph_b_sf_Core_2_Secondary.pdf, id=689, 533.08542pt x 340.63295p
+t>
+File: ../plots/oph_b/oph_b_sf_Core_2_Secondary.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_sf_Core_2_Secondary.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_sf_Core_2_Secondary.pdf  used on 
+input line 324.
+(pdftex.def)             Requested size: 245.82962pt x 157.08287pt.
+<../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf, id=690, 528.50996pt x 340.63295p
+t>
+File: ../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf Graphic file (type pdf)
+<use ../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf>
+Package pdftex.def Info: ../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf  used on 
+input line 331.
+(pdftex.def)             Requested size: 307.2929pt x 198.0558pt.
+ [11] [12 <../plots/oph_b/oph_b_stat_segmentation.pdf> <../plots/oph_b/oph_b_sn
+r_colored_full.pdf> <../plots/oph_b/oph_b_sf_Core_1_Primary.pdf> <../plots/oph_
+b/oph_b_sf_Core_2_Secondary.pdf> <../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf>
+] (./assembled_bistro_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7029 strings out of 478268
- 121820 string characters out of 5846347
- 415120 words of memory out of 5000000
- 25095 multiletter control sequences out of 15000+600000
- 496680 words of font info for 93 fonts, out of 8000000 for 9000
+ 6949 strings out of 478268
+ 119908 string characters out of 5846347
+ 421120 words of memory out of 5000000
+ 25039 multiletter control sequences out of 15000+600000
+ 490329 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,11n,77p,730b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,10n,77p,706b,502s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
@@ -865,19 +820,20 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/
-fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
-1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/cm-super/sfrm1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
-blic/cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/
-palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatin
-o/uplri8a.pfb>
-Output written on assembled_bistro_report.pdf (13 pages, 2831201 bytes).
+fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/upl
+ri8a.pfb>
+Output written on assembled_bistro_report.pdf (12 pages, 1938633 bytes).
 PDF statistics:
- 1120 PDF objects out of 1200 (max. 8388607)
- 929 compressed objects within 10 object streams
+ 903 PDF objects out of 1000 (max. 8388607)
+ 750 compressed objects within 8 object streams
  0 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

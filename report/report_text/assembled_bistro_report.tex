@@ -19,25 +19,55 @@
 \maketitle
 
 \section*{Methodology and Data Integrity}
-This report provides a quantitative assessment of molecular cloud structures based on BISTRO survey data. A key feature of the current pipeline is the prioritized use of hardware-derived metadata for error propagation.
+This section details the automated pipeline developed for the quantitative assessment of molecular cloud structures and magnetic field morphology. The analysis strictly avoids assuming an underlying physical model a priori, relying instead on a data-driven, mathematically rigorous approach to signal extraction and error propagation.
 
-\paragraph{Noise Analysis Strategy:}
-The pipeline implements a "Graceful Downgrade" logic. If the FITS headers and HDU structure (derived from the STARLINK \texttt{pol2map} reduction) contain \texttt{VARIANCE} and \texttt{QUALITY} extensions, these are utilized as the primary source of per-pixel uncertainty. This accounts for the non-uniform noise distribution inherent in the JCMT \textit{Daisy Scan} pattern. In the absence of such layers, the system reverts to a heuristic estimation of the RMS within a geometric safety zone, utilizing iterative sigma-clipping to isolate the background from the emission.
+\subsection*{Hierarchical Error Propagation and Noise Estimation}
+The pipeline implements a "Graceful Downgrade" logic to ensure the highest possible fidelity in uncertainty tracking. For each target, the system prioritizes hardware-derived metadata. If the FITS headers (derived from the STARLINK \texttt{pol2map} reduction) contain \texttt{VARIANCE} and \texttt{QUALITY} extensions, these are utilized as the primary source of per-pixel uncertainty ($\sigma_I, \sigma_Q, \sigma_U$). This rigorously accounts for the non-uniform spatial noise distribution inherent to the JCMT \textit{Daisy Scan} observing pattern.
 
-\paragraph{Debiasing and Physics:}
-To counteract the systematic overestimation of polarized intensity in low SNR regimes (Ricean bias), we apply the \textbf{Wardle \& Kronberg (1974)} debiasing technique: $PI_{db} = \sqrt{PI^2 - \sigma_{PI}^2}$. Pixels failing the $SNR_{PI} > 2$ criterion are excluded from the structure function analysis to prevent noise-driven artifacts in the magnetic field morphology.
-\newpage\section*{Target: Auriga}
+In the absence of hardware variance layers, the system reverts to a heuristic estimation. A geometric safety zone is defined by masking the central emission (via distance transform, applying an $8\%$ margin ratio from the map edges). Within this emission-free zone, the background root-mean-square (RMS) noise is estimated using an iterative $3\sigma$-clipping algorithm to exclude background artifacts, yielding a uniform $\sigma_{bg}$ for the Stokes parameters.
+
+\subsection*{Morphological Segmentation and Core Isolation}
+To analyze magnetic fields within distinct physical structures rather than arbitrary rectangular bounds, we apply an automated morphological segmentation routine. 
+If STARLINK \texttt{QUALITY} flags are present, they dictate the primary scientific mask. Otherwise, the structure is defined dynamically by thresholding the Stokes $I$ map at a specified $\sigma$-level above the median background. 
+
+The resulting boolean mask is processed using topological contour-finding algorithms. To filter out noise spikes and unassociated peripheral fragments, dynamic thresholding is applied: only regions with an area exceeding $33\%$ of the largest detected core (with an absolute geometric floor of $12$ pixels) are retained for analysis. This allows the pipeline to isolate the primary core, secondary fragments, and their combined footprint for scale-dependent structural analysis.
+
+\subsection*{Polarimetric Debiasing and Vector Selection}
+To counteract the systematic overestimation of polarized intensity in low signal-to-noise regimes (Ricean bias), we apply the classic \textbf{Wardle \& Kronberg (1974)} debiasing technique:
+\begin{equation}
+    PI_{db} = \sqrt{PI_{raw}^2 - \sigma_{PI}^2}
+\end{equation}
+where $\sigma_{PI}$ is derived via standard error propagation from Stokes $Q$ and $U$ uncertainties. To prevent noise-driven artifacts from masquerading as complex magnetic field morphology, a strict signal-to-noise threshold is enforced. Only pixels satisfying $SNR_{PI} \ge 2.0$ (or higher, depending on the targeted confidence level) are passed to the structural analysis. Vectors failing this criterion are masked as \texttt{NaN}.
+
+\subsection*{Scale-Dependent Structure Function and Statistical Cutoff}
+The dispersion of the magnetic field position angle is quantified using the second-order structure function $D_\phi(R)$. To optimize computational efficiency, the function is calculated using the normalized Stokes parameters ($q = Q/PI$, $u = U/PI$) via the small-angle identity:
+\begin{equation}
+    D_\phi(R) = \langle \sin^2(\Delta \phi) \rangle = \frac{1}{4} \langle (q_1 - q_2)^2 + (u_1 - u_2)^2 \rangle
+\end{equation}
+where the average is taken over all valid vector pairs separated by a distance $R \pm \Delta R$ (where $\Delta R$ is the bin width, set to $0.5$ pixels).
+
+To ensure geometric isotropy and avoid boundary effects, the maximum evaluated lag $R_{max}$ is dynamically restricted to $\frac{2}{3} L_{max}$, where $L_{max}$ is the maximum pixel span of the specific isolated region being analyzed. 
+
+Crucially, the pipeline incorporates an automated, statistics-driven cutoff to prevent the analysis of the "noise tail" at large spatial separations where pair counts drop significantly. For each lag bin $R$, the Standard Error of the Mean (SEM) is calculated:
+\begin{equation}
+    \sigma_{SEM}(R) = \frac{\sigma(D_\phi)}{\sqrt{N_{pairs}}}
+\end{equation}
+where $\sigma(D_\phi)$ is the standard deviation of the angular differences in the bin, and $N_{pairs}$ is the number of valid vector pairs. The computation for a given region is strictly halted when the relative statistical error exceeds $30\%$ ($\epsilon = \sigma_{SEM} / D_\phi > 0.30$) or the number of available pairs falls below $5$. This ensures that the resulting structure function reflects physical turbulence and magnetic field decorrelation, rather than the statistical volatility of small samples.\newpage\section*{Target: Auriga}
 \begin{table}[H]
     \centering
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 1502 \\
-        R\_range\_pc & 0.0087 -- 1.5708 \\
+        Segmentation Logic & \textbf{STARLINK QUALITY Flags} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 2 \\
+        Effective Pixels & 990 \\
         Distance (pc) & 450.00000 \\
-        R\_range\_px & [1, 180] \\
+        R\_range\_px & [1, 60] \\
+        R\_range\_pc & [0.0087, 0.5236] \\
+        Pixel scale (pc/pixel) & 0.00900 \\
+        Median SNR (PI) & 2.75700 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -49,37 +79,24 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/Auriga/Auriga_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/Auriga/Auriga_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
-\end{figure}
-\newpage
-\section*{Target: L1495}
-\begin{table}[H]
-    \centering
-    \caption*{Physical Parameters and Noise Methodology}
-    \begin{tabular}{lp{10cm}}
-        \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 78 \\
-        R\_range\_pc & 0.0054 -- 0.4941 \\
-        Distance (pc) & 140.00000 \\
-        R\_range\_px & [1, 91] \\
-        Vector Decimation Step & 3 px \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/L1495/L1495_stat_segmentation.pdf} 
-    \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/L1495/L1495_snr_colored_full.pdf} 
-    \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/L1495/L1495_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Auriga/Auriga_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure} \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Auriga/Auriga_sf_Core_2_Secondary.pdf} 
+        \caption{SF: Core 2 Secondary} 
+    \end{subfigure}
+    \vspace{0.4cm}
+    
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Auriga/Auriga_sf_Combined_1_and_2.pdf} 
+        \caption{SF: Combined (1 and 2)} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: L43\_Karoly\_2023}
@@ -88,12 +105,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 189 \\
-        R\_range\_pc & 0.0048 -- 0.4266 \\
+        Segmentation Logic & \textbf{STARLINK QUALITY Flags} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 1 \\
+        Effective Pixels & 139 \\
         Distance (pc) & 125.00000 \\
-        R\_range\_px & [1, 88] \\
+        R\_range\_px & [1, 22] \\
+        R\_range\_pc & [0.0048, 0.1067] \\
+        Pixel scale (pc/pixel) & 0.00500 \\
+        Median SNR (PI) & 2.75300 \\
         Vector Decimation Step & 2 px \\
         \bottomrule
     \end{tabular}
@@ -105,9 +126,12 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/L43_Karoly_2023/L43_Karoly_2023_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/L43_Karoly_2023/L43_Karoly_2023_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/L43_Karoly_2023/L43_Karoly_2023_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: MonR2}
@@ -116,12 +140,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 4402 \\
-        R\_range\_pc & 0.0161 -- 2.8329 \\
+        Segmentation Logic & \textbf{STARLINK QUALITY Flags} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 1 \\
+        Effective Pixels & 3835 \\
         Distance (pc) & 830.00000 \\
-        R\_range\_px & [1, 176] \\
+        R\_range\_px & [1, 80] \\
+        R\_range\_pc & [0.0161, 1.2877] \\
+        Pixel scale (pc/pixel) & 0.01600 \\
+        Median SNR (PI) & 4.20400 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -133,57 +161,12 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/MonR2/MonR2_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/MonR2/MonR2_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
-\end{figure}
-\newpage
-\section*{Target: NGC1333}
-\begin{table}[H]
-    \centering
-    \caption*{Physical Parameters and Noise Methodology}
-    \begin{tabular}{lp{10cm}}
-        \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Distance & 299.0 pc \\
-        \textit{Data Status} & \color{red}\textit{Stats JSON missing (Heuristic Fallback implied)} \\
-        Vector Decimation Step & 3 px \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/NGC1333/NGC1333_stat_segmentation.pdf} 
-    \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/NGC1333/NGC1333_snr_colored_full.pdf} 
-    \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/NGC1333/NGC1333_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
-\end{figure}
-\newpage
-\section*{Target: OMC1\_450}
-\begin{table}[H]
-    \centering
-    \caption*{Physical Parameters and Noise Methodology}
-    \begin{tabular}{lp{10cm}}
-        \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Distance & 388.0 pc \\
-        \textit{Data Status} & \color{red}\textit{Stats JSON missing (Heuristic Fallback implied)} \\
-        Vector Decimation Step & 3 px \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/OMC1_450/OMC1_450_stat_segmentation.pdf} 
-    \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/OMC1_450/OMC1_450_snr_colored_full.pdf} 
-    \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/OMC1_450/OMC1_450_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/MonR2/MonR2_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: OMC1}
@@ -192,12 +175,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{0.1$\sigma$ Heuristic + Hardware Variance} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 6779 \\
-        R\_range\_pc & 0.0075 -- 1.3995 \\
+        Segmentation Logic & \textit{Heuristic Sigma-Clipping (0.1 sigma)} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 1 \\
+        Effective Pixels & 6292 \\
         Distance (pc) & 388.00000 \\
-        R\_range\_px & [1, 186] \\
+        R\_range\_px & [1, 109] \\
+        R\_range\_pc & [0.0075, 0.8201] \\
+        Pixel scale (pc/pixel) & 0.00800 \\
+        Median SNR (PI) & 9.64600 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -209,9 +196,12 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/OMC1/OMC1_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/OMC1/OMC1_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/OMC1/OMC1_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: Perseus\_B1}
@@ -220,12 +210,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{0.3$\sigma$ Heuristic + Hardware Variance} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 401 \\
-        R\_range\_pc & 0.0170 -- 1.0228 \\
+        Segmentation Logic & \textit{Heuristic Sigma-Clipping (0.3 sigma)} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 2 \\
+        Effective Pixels & 230 \\
         Distance (pc) & 293.00000 \\
-        R\_range\_px & [1, 60] \\
+        R\_range\_px & [1, 21] \\
+        R\_range\_pc & [0.017, 0.358] \\
+        Pixel scale (pc/pixel) & 0.01700 \\
+        Median SNR (PI) & 4.76100 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -237,37 +231,24 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/Perseus_B1/Perseus_B1_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/Perseus_B1/Perseus_B1_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
-\end{figure}
-\newpage
-\section*{Target: Rosette}
-\begin{table}[H]
-    \centering
-    \caption*{Physical Parameters and Noise Methodology}
-    \begin{tabular}{lp{10cm}}
-        \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 1452 \\
-        R\_range\_pc & 0.0258 -- 4.9005 \\
-        Distance (pc) & 1330.00000 \\
-        R\_range\_px & [1, 190] \\
-        Vector Decimation Step & 3 px \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/Rosette/Rosette_stat_segmentation.pdf} 
-    \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/Rosette/Rosette_snr_colored_full.pdf} 
-    \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/Rosette/Rosette_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Perseus_B1/Perseus_B1_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure} \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Perseus_B1/Perseus_B1_sf_Core_2_Secondary.pdf} 
+        \caption{SF: Core 2 Secondary} 
+    \end{subfigure}
+    \vspace{0.4cm}
+    
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/Perseus_B1/Perseus_B1_sf_Combined_1_and_2.pdf} 
+        \caption{SF: Combined (1 and 2)} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: oph\_a}
@@ -276,12 +257,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 2288 \\
-        R\_range\_pc & 0.0027 -- 0.4744 \\
+        Segmentation Logic & \textbf{STARLINK QUALITY Flags} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 1 \\
+        Effective Pixels & 1775 \\
         Distance (pc) & 139.00000 \\
-        R\_range\_px & [1, 176] \\
+        R\_range\_px & [1, 60] \\
+        R\_range\_pc & [0.0027, 0.1617] \\
+        Pixel scale (pc/pixel) & 0.00300 \\
+        Median SNR (PI) & 3.75500 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -293,9 +278,12 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/oph_a/oph_a_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/oph_a/oph_a_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/oph_a/oph_a_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \section*{Target: oph\_b}
@@ -304,12 +292,16 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption*{Physical Parameters and Noise Methodology}
     \begin{tabular}{lp{10cm}}
         \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 1370 \\
-        R\_range\_pc & 0.0027 -- 0.4744 \\
+        Segmentation Logic & \textbf{STARLINK QUALITY Flags} \\
+        Error Source (Stokes I) & \textbf{STARLINK VARIANCE HDU} \\
+        Error Source (Stokes Q/U) & \textbf{STARLINK VARIANCE HDU} \\
+        Detected Regions & 2 \\
+        Effective Pixels & 1145 \\
         Distance (pc) & 139.00000 \\
-        R\_range\_px & [1, 176] \\
+        R\_range\_px & [1, 73] \\
+        R\_range\_pc & [0.0027, 0.1968] \\
+        Pixel scale (pc/pixel) & 0.00300 \\
+        Median SNR (PI) & 2.69900 \\
         Vector Decimation Step & 3 px \\
         \bottomrule
     \end{tabular}
@@ -321,37 +313,24 @@ To counteract the systematic overestimation of polarized intensity in low SNR re
     \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
     \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/oph_b/oph_b_snr_colored_full.pdf} 
     \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/oph_b/oph_b_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
-\end{figure}
-\newpage
-\section*{Target: oph\_c}
-\begin{table}[H]
-    \centering
-    \caption*{Physical Parameters and Noise Methodology}
-    \begin{tabular}{lp{10cm}}
-        \toprule \textbf{Parameter} & \textbf{Value} \\ \midrule
-        Method I & \textbf{Hardware QUALITY Mask} \\
-        Method QU & \textbf{Hardware Variance} \\
-        Effective Pixels & 921 \\
-        R\_range\_pc & 0.0027 -- 0.4744 \\
-        Distance (pc) & 139.00000 \\
-        R\_range\_px & [1, 176] \\
-        Vector Decimation Step & 3 px \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/oph_c/oph_c_stat_segmentation.pdf} 
-    \caption{Segmentation \& Clump Masking} \end{subfigure} \hfill
-    \begin{subfigure}{0.48\textwidth} \includegraphics[width=\linewidth]{../plots/oph_c/oph_c_snr_colored_full.pdf} 
-    \caption{SNR-Coded B-Field Vectors} \end{subfigure}
-    \vspace{0.5cm}
-    \begin{subfigure}{0.7\textwidth} \includegraphics[width=\linewidth]{../plots/oph_c/oph_c_sf.pdf} 
-    \caption{Structure Function $D_\phi(R)$} \end{subfigure}
+\vspace{0.5cm}
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/oph_b/oph_b_sf_Core_1_Primary.pdf} 
+        \caption{SF: Core 1 Primary} 
+    \end{subfigure} \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/oph_b/oph_b_sf_Core_2_Secondary.pdf} 
+        \caption{SF: Core 2 Secondary} 
+    \end{subfigure}
+    \vspace{0.4cm}
+    
+    \begin{subfigure}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../plots/oph_b/oph_b_sf_Combined_1_and_2.pdf} 
+        \caption{SF: Combined (1 and 2)} 
+    \end{subfigure}
 \end{figure}
 \newpage
 \end{document}
