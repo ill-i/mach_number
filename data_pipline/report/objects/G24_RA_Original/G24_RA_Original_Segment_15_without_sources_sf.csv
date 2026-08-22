@@ -1,0 +1,5 @@
+R_pix,Dphi,Dphi_err,Npairs,R_arcsec,R_pc,object_name,mask_name,dataset
+1.0,0.005360165957513849,0.0018649854404626004,202,4.549999999999985,0.0,G24_RA_Original,Segment_15_without_sources,without_sources
+2.0,0.018134245127646345,0.0052485137300594085,210,9.09999999999997,0.0,G24_RA_Original,Segment_15_without_sources,without_sources
+3.0,0.038084683620161326,0.009544326579122962,190,13.649999999999954,0.0,G24_RA_Original,Segment_15_without_sources,without_sources
+4.0,0.07609004081262132,0.015361585830755604,214,18.19999999999994,0.0,G24_RA_Original,Segment_15_without_sources,without_sources

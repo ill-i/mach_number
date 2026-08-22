@@ -1,0 +1,94 @@
+{
+  "input_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc",
+  "output_directory": "/Users/ildana/astro/nu/mach_number/data_pipline",
+  "parameters": {
+    "snr_threshold": 3.0,
+    "min_beams": 10.0,
+    "edge_erode_beams": 1.0,
+    "max_source_size_arcsec": 120.0,
+    "sreliable": 5.0,
+    "stentative": 3.0,
+    "getsources_beam_fallback_arcsec": 18.2,
+    "pix_scale_fallback_arcsec": 4.55,
+    "source_catalog_mode": "reliable",
+    "distance_pc": 0.0,
+    "vector_step": 4
+  },
+  "objects": [
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/Fil1_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil1_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil1_RA_Original",
+      "rows": 4,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil1_RA_Original/getsources_runs/final/combo/+catalogs/Fil1I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil1_RA_Original/getsources_runs/final/combo/sm.Fil1I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/Fil2_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil2_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original",
+      "rows": 15,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil2_RA_Original/getsources_runs/final/combo/+catalogs/Fil2I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil2_RA_Original/getsources_runs/final/combo/sm.Fil2I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/Fil4_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil4_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original",
+      "rows": 6,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil4_RA_Original/getsources_runs/final/combo/+catalogs/Fil4I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil4_RA_Original/getsources_runs/final/combo/sm.Fil4I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/G24_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G24_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original",
+      "rows": 34,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G24_RA_Original/getsources_runs/final/combo/+catalogs/G24I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G24_RA_Original/getsources_runs/final/combo/sm.G24I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/G47_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G47_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original",
+      "rows": 5,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G47_RA_Original/getsources_runs/final/combo/+catalogs/G47I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G47_RA_Original/getsources_runs/final/combo/sm.G47I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/G49_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G49_RA_Original",
+      "warnings": [],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original",
+      "rows": 17,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G49_RA_Original/getsources_runs/final/combo/+catalogs/G49I.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/G49_RA_Original/getsources_runs/final/combo/sm.G49I.sw.det.footprints.fits"
+    },
+    {
+      "file": "/Users/ildana/astro/nu/mach_number/data_pipline/data_hawc/Snake_RA_Original.fits",
+      "status": "analyzed",
+      "prepared_root": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Snake_RA_Original",
+      "warnings": [
+        "PIXSCAL=9.430 differs from WCS=4.550 arcsec/pix; WCS used",
+        "BEAM missing; nominal 18.20 arcsec used for 216.0 um"
+      ],
+      "report_directory": "/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original",
+      "rows": 7,
+      "catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Snake_RA_Original/getsources_runs/final/combo/+catalogs/SnakeI.sw.final.reliable.cat",
+      "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Snake_RA_Original/getsources_runs/final/combo/sm.SnakeI.sw.det.footprints.fits"
+    }
+  ],
+  "tex_report": "/Users/ildana/astro/nu/mach_number/data_pipline/report/hawc_pipeline_report.tex",
+  "pdf_report": "/Users/ildana/astro/nu/mach_number/data_pipline/report/hawc_pipeline_report.pdf"
+}

@@ -1,10 +1,46 @@
-data/
-report/plots/
-.DB_store
-.ipynb_checkpoints/
+# macOS and editor metadata
 .DS_Store
+._*
+*.swp
+*.swo
+*~
 
-.DS_Store
-report/fireplace_results
-report/fieldmaps_results
+# Python caches and local environments
 __pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large input data and legacy generated products
+/data/
+/report/
+/getsources/
+
+# Legacy root-level HAWC+ experiment (copies live in data_pipline/)
+/getsources_sf_analysis.py
+/hawc_plus_sofia.ipynb
+
+# HAWC+ pipeline inputs and reproducible intermediate products
+/data_pipline/data_hawc/
+/data_pipline/work/
+/data_pipline/.+readhead
+
+# Reproducible FITS masks; keep CSV, JSON, TeX, PDF and PNG results
+/data_pipline/report/objects/**/*.fits
+
+# LaTeX build artefacts in the pipeline report directory
+/data_pipline/report/*.aux
+/data_pipline/report/*.fdb_latexmk
+/data_pipline/report/*.fls
+/data_pipline/report/*.log
+/data_pipline/report/*.out
+/data_pipline/report/*.toc
+/data_pipline/report/texput.log
+

@@ -1,0 +1,23 @@
+{
+  "object": "Fil2_RA_Original",
+  "segments": 7,
+  "adaptive_Smin_px": 181.28000000000122,
+  "source_catalog_mode": "reliable",
+  "source_catalog": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil2_RA_Original/getsources_runs/final/combo/+catalogs/Fil2I.sw.final.reliable.cat",
+  "source_count": 28,
+  "footprints": "/Users/ildana/astro/nu/mach_number/data_pipline/work/Fil2_RA_Original/getsources_runs/final/combo/sm.Fil2I.sw.det.footprints.fits",
+  "parameters": {
+    "snr_threshold": 3.0,
+    "min_beams": 10.0,
+    "edge_erode_beams": 1.0,
+    "max_source_size_arcsec": 120.0,
+    "sreliable": 5.0,
+    "stentative": 3.0,
+    "getsources_beam_fallback_arcsec": 18.2,
+    "pix_scale_fallback_arcsec": 4.55,
+    "source_catalog_mode": "reliable",
+    "distance_pc": 0.0,
+    "vector_step": 4
+  },
+  "warnings": []
+}

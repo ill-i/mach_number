@@ -1,0 +1,549 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage[margin=1.35cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\begin{document}
+\title{Автоматический анализ поляризации HAWC+, источников и структурных функций}
+\author{HAWC+ / GETSOURCES pipeline}
+\date{\today}
+\maketitle
+\tableofcontents
+\clearpage
+\section{Fil1\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 2; источников в каталоге: 12; каталог: \texttt{reliable}.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil1_RA_Original/Fil1_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil1_RA_Original/Fil1_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 2.270 & 152 & 101 & 13.000 & 4497 & 0.817 & 0.017 & 0.174 & 0.3310 & ok \\
+Segment\_1 & without\_sources & -- & 151 & 100 & 13.000 & 2613 & 0.478 & 0.017 & 0.131 & 0.3265 & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 151 & 100 & -- & 1884 & 0.817 & 0.031 & 0.249 & -- & disconnected\_mask \\
+Segment\_2 & with\_sources & 1.320 & 23 & 15 & 10.000 & 266 & 0.150 & 0.019 & 0.093 & 0.1605 & ok \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil1_RA_Original/Fil1_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil1_RA_Original/Fil1_RA_Original_Segment_2_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_2: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{Fil2\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 7; источников в каталоге: 28; каталог: \texttt{reliable}.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 2.294 & 169 & 112 & 14.000 & 5020 & 2.396 & 0.015 & 0.213 & 0.3102 & ok \\
+Segment\_1 & without\_sources & -- & 169 & 112 & 14.000 & 3982 & 0.937 & 0.015 & 0.179 & 0.3015 & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 160 & 106 & 43.000 & 1038 & 2.396 & 0.015 & 0.409 & 0.3896 & disconnected\_mask \\
+Segment\_2 & with\_sources & 1.817 & 108 & 72 & 18.000 & 3558 & 0.712 & -0.005 & 0.089 & 0.3811 & ok \\
+Segment\_2 & without\_sources & -- & 108 & 72 & 18.000 & 3195 & 0.598 & -0.005 & 0.080 & 0.3284 & disconnected\_mask \\
+Segment\_2 & sources\_only & -- & 25 & 16 & -- & 363 & 0.712 & 0.058 & 0.225 & -- & missing\_input \\
+Segment\_3 & with\_sources & 1.786 & 57 & 38 & 10.000 & 1652 & 1.515 & 0.011 & 0.287 & 0.2238 & ok \\
+Segment\_3 & without\_sources & -- & 57 & 38 & 10.000 & 805 & 0.837 & 0.011 & 0.144 & 0.2201 & disconnected\_mask \\
+Segment\_3 & sources\_only & -- & 52 & 34 & 12.000 & 847 & 1.515 & 0.024 & 0.488 & 0.2169 & disconnected\_mask \\
+Segment\_4 & with\_sources & 1.241 & 65 & 43 & 34.000 & 1022 & 1.143 & 0.028 & 0.188 & 0.3961 & ok \\
+Segment\_4 & without\_sources & -- & 64 & 42 & 33.000 & 494 & 0.562 & 0.028 & 0.105 & 0.4289 & disconnected\_mask \\
+Segment\_4 & sources\_only & -- & 34 & 22 & -- & 528 & 1.143 & 0.063 & 0.394 & -- & disconnected\_mask \\
+Segment\_5 & with\_sources & -- & 34 & 22 & -- & 659 & 0.288 & 0.022 & 0.131 & -- & missing\_input \\
+Segment\_6 & with\_sources & 1.490 & 43 & 28 & 13.000 & 590 & 0.259 & 0.008 & 0.131 & 0.2543 & ok \\
+Segment\_7 & with\_sources & -- & 31 & 20 & -- & 549 & 0.248 & 0.025 & 0.139 & -- & missing\_input \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_2_sf_four_rows.pdf}}
+\caption{Segment\_2: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_3_sf_four_rows.pdf}}
+\caption{Segment\_3: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_4}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_4_sf_four_rows.pdf}}
+\caption{Segment\_4: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_5}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_5_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_5: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_6}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_6_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_6: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_7}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil2_RA_Original/Fil2_RA_Original_Segment_7_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_7: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{Fil4\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 4; источников в каталоге: 8; каталог: \texttt{reliable}.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 2.493 & 186 & 124 & 12.000 & 9005 & 1.874 & -0.006 & 0.176 & 0.4075 & ok \\
+Segment\_1 & without\_sources & -- & 186 & 124 & 12.000 & 7384 & 1.065 & -0.006 & 0.147 & 0.4005 & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 122 & 81 & -- & 1621 & 1.874 & 0.026 & 0.340 & -- & disconnected\_mask \\
+Segment\_2 & with\_sources & 1.526 & 32 & 21 & 9.000 & 517 & 0.233 & 0.026 & 0.118 & 0.1751 & ok \\
+Segment\_3 & with\_sources & -- & 21 & 14 & -- & 257 & 0.126 & 0.046 & 0.083 & -- & missing\_input \\
+Segment\_4 & with\_sources & -- & 20 & 13 & -- & 213 & 0.222 & 0.101 & 0.181 & -- & missing\_input \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_Segment_2_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_2: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_Segment_3_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_3: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_4}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Fil4_RA_Original/Fil4_RA_Original_Segment_4_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_4: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{G24\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 16; источников в каталоге: 29; каталог: \texttt{reliable}.
+\textbf{Высокая доля источника:} Segment\_15=87.1\%. Для этих сегментов вариант without sources содержит мало оставшихся пикселей.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 2.190 & 126 & 84 & 12.000 & 4974 & 1.687 & 0.009 & 0.323 & 0.3789 & ok \\
+Segment\_1 & without\_sources & -- & 126 & 84 & -- & 3010 & 1.222 & 0.009 & 0.234 & -- & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 100 & 66 & 10.000 & 1964 & 1.687 & 0.047 & 0.517 & 0.3269 & disconnected\_mask \\
+Segment\_2 & with\_sources & -- & 97 & 64 & -- & 4788 & 0.644 & -0.013 & 0.232 & -- & missing\_input \\
+Segment\_2 & without\_sources & -- & 97 & 64 & -- & 4149 & 0.644 & -0.013 & 0.230 & -- & missing\_input \\
+Segment\_2 & sources\_only & -- & 61 & 40 & 15.000 & 639 & 0.540 & 0.015 & 0.238 & 0.1961 & disconnected\_mask \\
+Segment\_3 & with\_sources & -- & 95 & 63 & -- & 3125 & 0.539 & 0.031 & 0.200 & -- & missing\_input \\
+Segment\_3 & without\_sources & -- & 95 & 63 & -- & 2476 & 0.429 & 0.031 & 0.174 & -- & disconnected\_mask \\
+Segment\_3 & sources\_only & -- & 32 & 21 & -- & 649 & 0.539 & 0.103 & 0.269 & -- & missing\_input \\
+Segment\_4 & with\_sources & 1.551 & 97 & 64 & 26.000 & 2560 & 0.667 & 0.027 & 0.223 & 0.4954 & ok \\
+Segment\_4 & without\_sources & -- & 93 & 62 & 23.000 & 2364 & 0.527 & 0.027 & 0.220 & 0.4243 & disconnected\_mask \\
+Segment\_4 & sources\_only & -- & 26 & 17 & -- & 196 & 0.667 & 0.086 & 0.309 & -- & disconnected\_mask \\
+Segment\_5 & with\_sources & -- & 83 & 55 & -- & 2329 & 2.754 & 0.021 & 0.293 & -- & missing\_input \\
+Segment\_5 & without\_sources & -- & 83 & 55 & -- & 2028 & 0.894 & 0.021 & 0.246 & -- & disconnected\_mask \\
+Segment\_5 & sources\_only & -- & 32 & 21 & 12.000 & 301 & 2.754 & 0.187 & 0.686 & 0.3144 & disconnected\_mask \\
+Segment\_6 & with\_sources & 1.293 & 80 & 53 & 37.000 & 1792 & 1.020 & 0.066 & 0.271 & 0.4182 & ok \\
+Segment\_6 & without\_sources & -- & 72 & 48 & 17.000 & 991 & 0.406 & 0.066 & 0.251 & 0.2410 & disconnected\_mask \\
+Segment\_6 & sources\_only & -- & 67 & 44 & 31.000 & 801 & 1.020 & 0.089 & 0.314 & 0.4915 & disconnected\_mask \\
+Segment\_7 & with\_sources & 1.370 & 54 & 36 & 21.000 & 1276 & 0.228 & 0.001 & 0.083 & 0.1356 & ok \\
+Segment\_7 & without\_sources & -- & 53 & 35 & -- & 1201 & 0.228 & 0.001 & 0.080 & -- & missing\_input \\
+Segment\_7 & sources\_only & -- & 16 & 10 & -- & 75 & 0.148 & 0.044 & 0.095 & -- & disconnected\_mask \\
+Segment\_8 & with\_sources & 1.413 & 48 & 32 & 17.000 & 570 & 0.426 & 0.046 & 0.166 & 0.1795 & ok \\
+Segment\_9 & with\_sources & 1.351 & 37 & 24 & 15.000 & 499 & 0.314 & 0.033 & 0.086 & 0.2515 & ok \\
+Segment\_10 & with\_sources & -- & 27 & 18 & -- & 402 & 0.189 & 0.052 & 0.125 & -- & missing\_input \\
+Segment\_11 & with\_sources & -- & 26 & 17 & -- & 391 & 0.238 & 0.044 & 0.125 & -- & missing\_input \\
+Segment\_12 & with\_sources & -- & 26 & 17 & -- & 389 & 0.268 & 0.025 & 0.093 & -- & missing\_input \\
+Segment\_13 & with\_sources & 1.364 & 33 & 22 & 13.000 & 347 & 0.240 & 0.060 & 0.141 & 0.0364 & ok \\
+Segment\_13 & without\_sources & 1.442 & 33 & 22 & 11.000 & 319 & 0.240 & 0.060 & 0.140 & 0.0337 & ok \\
+Segment\_13 & sources\_only & -- & 15 & 10 & -- & 28 & 0.239 & 0.103 & 0.201 & -- & disconnected\_mask \\
+Segment\_14 & with\_sources & 1.375 & 26 & 17 & 10.000 & 330 & 0.212 & 0.050 & 0.142 & 0.1153 & ok \\
+Segment\_15 & with\_sources & -- & 28 & 18 & -- & 303 & 0.486 & 0.018 & 0.152 & -- & missing\_input \\
+Segment\_15 & without\_sources & -- & 20 & 13 & -- & 39 & 0.082 & 0.018 & 0.040 & -- & disconnected\_mask \\
+Segment\_15 & sources\_only & -- & 22 & 14 & -- & 264 & 0.486 & 0.040 & 0.175 & -- & missing\_input \\
+Segment\_16 & with\_sources & -- & 32 & 21 & -- & 301 & 0.245 & -0.017 & 0.119 & -- & missing\_input \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_2_sf_four_rows.pdf}}
+\caption{Segment\_2: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_3_sf_four_rows.pdf}}
+\caption{Segment\_3: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_4}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_4_sf_four_rows.pdf}}
+\caption{Segment\_4: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_5}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_5_sf_four_rows.pdf}}
+\caption{Segment\_5: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_6}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_6_sf_four_rows.pdf}}
+\caption{Segment\_6: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_7}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_7_sf_four_rows.pdf}}
+\caption{Segment\_7: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_8}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_8_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_8: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_9}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_9_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_9: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_10}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_10_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_10: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_11}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_11_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_11: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_12}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_12_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_12: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_13}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_13_sf_four_rows.pdf}}
+\caption{Segment\_13: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_14}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_14_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_14: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_15}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_15_sf_four_rows.pdf}}
+\caption{Segment\_15: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_16}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G24_RA_Original/G24_RA_Original_Segment_16_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_16: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{G47\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 3; источников в каталоге: 41; каталог: \texttt{reliable}.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original/G47_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original/G47_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 3.069 & 289 & 192 & 10.000 & 8889 & 1.179 & -0.001 & 0.121 & 0.3467 & ok \\
+Segment\_1 & without\_sources & -- & 289 & 192 & 12.000 & 7745 & 1.179 & -0.001 & 0.118 & 0.3430 & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 147 & 98 & 78.000 & 1144 & 1.160 & -0.000 & 0.164 & 0.1895 & disconnected\_mask \\
+Segment\_2 & with\_sources & 1.397 & 30 & 20 & 11.000 & 359 & 0.081 & 0.036 & 0.062 & 0.0895 & ok \\
+Segment\_3 & with\_sources & 1.342 & 29 & 19 & 12.000 & 305 & 0.077 & 0.015 & 0.031 & 0.1057 & ok \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original/G47_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original/G47_RA_Original_Segment_2_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_2: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G47_RA_Original/G47_RA_Original_Segment_3_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_3: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{G49\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 7; источников в каталоге: 48; каталог: \texttt{reliable}.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & -- & 146 & 97 & -- & 7186 & 16.629 & 0.008 & 0.440 & -- & missing\_input \\
+Segment\_1 & without\_sources & -- & 146 & 97 & -- & 4759 & 3.350 & 0.008 & 0.262 & -- & disconnected\_mask \\
+Segment\_1 & sources\_only & -- & 121 & 80 & -- & 2427 & 16.629 & 0.097 & 1.099 & -- & disconnected\_mask \\
+Segment\_2 & with\_sources & -- & 111 & 74 & -- & 2387 & 12.389 & 0.045 & 1.012 & -- & missing\_input \\
+Segment\_2 & without\_sources & -- & 106 & 70 & -- & 851 & 2.602 & 0.045 & 0.533 & -- & disconnected\_mask \\
+Segment\_2 & sources\_only & -- & 110 & 73 & -- & 1536 & 12.389 & 0.215 & 1.699 & -- & disconnected\_mask \\
+Segment\_3 & with\_sources & -- & 56 & 37 & -- & 1170 & 1.218 & 0.085 & 0.483 & -- & missing\_input \\
+Segment\_3 & without\_sources & -- & 56 & 37 & -- & 664 & 1.148 & 0.085 & 0.471 & -- & disconnected\_mask \\
+Segment\_3 & sources\_only & -- & 36 & 24 & -- & 506 & 1.218 & 0.114 & 0.495 & -- & disconnected\_mask \\
+Segment\_4 & with\_sources & 1.442 & 51 & 34 & 17.000 & 689 & 1.627 & 0.111 & 0.542 & 0.4124 & ok \\
+Segment\_4 & without\_sources & -- & 49 & 32 & -- & 433 & 1.390 & 0.111 & 0.415 & -- & disconnected\_mask \\
+Segment\_4 & sources\_only & -- & 47 & 31 & -- & 256 & 1.627 & 0.217 & 0.805 & -- & disconnected\_mask \\
+Segment\_5 & with\_sources & -- & 29 & 19 & -- & 513 & 1.720 & 0.114 & 0.649 & -- & missing\_input \\
+Segment\_5 & without\_sources & -- & 29 & 19 & -- & 278 & 1.355 & 0.114 & 0.529 & -- & disconnected\_mask \\
+Segment\_5 & sources\_only & -- & 20 & 13 & -- & 235 & 1.720 & 0.215 & 0.747 & -- & missing\_input \\
+Segment\_6 & with\_sources & -- & 29 & 19 & -- & 402 & 0.173 & 0.023 & 0.113 & -- & missing\_input \\
+Segment\_7 & with\_sources & 1.424 & 26 & 17 & 9.000 & 228 & 0.279 & 0.051 & 0.120 & 0.0549 & ok \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_2_sf_four_rows.pdf}}
+\caption{Segment\_2: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_3_sf_four_rows.pdf}}
+\caption{Segment\_3: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_4}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_4_sf_four_rows.pdf}}
+\caption{Segment\_4: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_5}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_5_sf_four_rows.pdf}}
+\caption{Segment\_5: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_6}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_6_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_6: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_7}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/G49_RA_Original/G49_RA_Original_Segment_7_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_7: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\clearpage
+\section{Snake\_RA\_Original}
+Адаптивный порог площади: $S_{\min}=181.3$ пикс.; сегментов: 5; источников в каталоге: 6; каталог: \texttt{reliable}.
+\textbf{Предупреждения:} PIXSCAL=9.430 differs from WCS=4.550 arcsec/pix; WCS used; BEAM missing; nominal 18.20 arcsec used for 216.0 um.
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_snr_colored_map.pdf}}
+\caption{Поляризационные углы, цвет которых кодирует S/N.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.88\textwidth]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_segmentation_sources.pdf}}
+\caption{Адаптивная сегментация и надёжные GETSOURCES-источники.}
+\end{figure}
+\subsection*{Детализация по областям}
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\begin{longtable}{llrrrrrrrrrl}
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endfirsthead
+\toprule
+Сегмент & Маска & $M_A$ & $L$ & $R_{\max}$ & $l_A$ & Площадь & $I_{\max}$ & $I_{\min}$ & $I_{\rm med}$ & Плато & Статус \\
+\midrule\endhead
+Segment\_1 & with\_sources & 1.491 & 126 & 84 & 38.000 & 4167 & 2.839 & -0.179 & 0.123 & 0.4336 & ok \\
+Segment\_1 & without\_sources & 1.431 & 126 & 84 & 43.000 & 4050 & 0.597 & -0.179 & 0.119 & 0.4063 & ok \\
+Segment\_1 & sources\_only & -- & 11 & 7 & -- & 117 & 2.839 & 0.258 & 0.897 & -- & missing\_input \\
+Segment\_2 & with\_sources & 1.296 & 74 & 49 & 34.000 & 2324 & 0.969 & -0.221 & 0.305 & 0.2439 & ok \\
+Segment\_3 & with\_sources & 1.687 & 48 & 32 & 10.000 & 989 & 0.424 & -0.150 & 0.000 & 0.0403 & ok \\
+Segment\_4 & with\_sources & -- & 31 & 20 & -- & 330 & 0.230 & -0.139 & 0.067 & -- & missing\_input \\
+Segment\_5 & with\_sources & 1.442 & 21 & 14 & 7.000 & 233 & 0.057 & -0.114 & -0.036 & 0.2408 & ok \\
+\bottomrule
+\end{longtable}
+\normalsize
+\clearpage
+\subsection*{Segment\_1}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_Segment_1_sf_four_rows.pdf}}
+\caption{Segment\_1: SF with, without and only sources, plus their overlay.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_2}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_Segment_2_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_2: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_3}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_Segment_3_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_3: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_4}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_Segment_4_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_4: SF; no reliable source overlaps this segment.}
+\end{figure}
+\clearpage
+\subsection*{Segment\_5}
+\begin{figure}[H]\centering
+\includegraphics[height=0.88\textheight,width=\textwidth,keepaspectratio]{\detokenize{/Users/ildana/astro/nu/mach_number/data_pipline/report/objects/Snake_RA_Original/Snake_RA_Original_Segment_5_with_sources_sf_diagnostic.pdf}}
+\caption{Segment\_5: SF; no reliable source overlaps this segment.}
+\end{figure}
+\FloatBarrier
+\end{document}
